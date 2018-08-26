@@ -18,3 +18,8 @@
   </li>
 </ul>
 
+<input #number1 (keyup.enter) = "number1.value" type = "number" name ="number1">
+{{PrintOne(number1.value)}}
+<input #number2 (keyup.enter) = "number2.value" type = "number" name = "number2">
+<p>{{PrintSecond(number2.value)}}</p>
+<button (click) ="Add()"> Add </button>
