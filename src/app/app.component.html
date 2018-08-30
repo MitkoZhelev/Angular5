@@ -18,12 +18,34 @@
   </li>
 </ul>
 
-<input #number1 (keyup.enter) = "number1.value" type = "number" name ="number1">
+<!-- <input #number1 (keyup.enter) = "number1.value" type = "number" name ="number1">
 {{PrintOne(number1.value)}}
-<input #number2 (keyup.enter) = "number2.value" type = "number" name = "number2">
+<input #number2 (keyup.enter) = "number2.value" t ype = "number" name = "number2">
 <p>{{PrintSecond(number2.value)}}</p>
 <button (click) ="Add()"> Add </button>
 <p>{{Add()}}</p>
 <button (click) = "Substract()"> Substract</button>
 <p>{{Substract()}}</p>
-<button (click) = "Multiply()"> Multiply</button>
+<button (click) = "Multiply()"> Multiply</button> -->
+<br>
+<button (click) = "One('1')">1</button>
+<button (click) = "Two('2')">2</button>
+<button (click) = "Three('3')">3</button>
+<br>
+<button (click) = "Four('4')">4</button>
+<button (click) = "Five('5')">5</button>
+<button (click) = "Six('6')">6</button>
+<br>
+<button (click) ="Seven('7')">7</button>
+<button (click) ="Eight('8')">8</button>
+<button (click) ="Nine('9')">9</button>
+<br>
+<button (click) = "Dot()">.</button>
+<button (click) = "Zero('0')">0</button>
+<button (click) = "Equals()">=</button>
+<br>
+<button (click) = "Add()">+</button>
+<button (click) = "Substract()">-</button>
+<button (click) = "Multiply()">*</button>
+<button (click) = "Divide()">/</button>
+{{Print()}}
