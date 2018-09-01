@@ -11,7 +11,11 @@ export class AppComponent {
   number1 :number = 0;
   number2 : number = 0;
   flagSecond : boolean = false;
-//  result : number;
+  result : number;
+  flagAdd : boolean = false;
+  flagSubtract: boolean = false;
+  flagDivide:boolean = false;
+  flagMultiply:boolean = false;
 //  public PrintOne (first) {
 //    this.number1 = first;
 //  }
@@ -45,9 +49,9 @@ export class AppComponent {
    let one = 1;
    if(!this.flagSecond)
    {
-    this.number1  = this.number1 + 1; 
+    this.number1  = +this.number1 + +1; 
  }else {
-   this.number2 = one;
+   this.number2 = +this.number1 + +one;
  }
    }
    
@@ -97,9 +101,49 @@ export class AppComponent {
      this.number1 = 0;
    }else{this.number2 = 0;}
  }
+ 
  public Print () {
-   console.log(this.number1 + this.number2);
+   this.result = this.number1 + this.number2 ;
+   console.log(this.result);
  }
-
+public Add(){
+  this.flagSecond = true;
+  this.flagAdd = true;
+}
+public Multiply() {
+  this.flagSecond = true;
+  this.flagMultiply = true;
+}
+public Divide() {
+  this.flagSecond = true;
+  this.flagDivide = true;
+}
+public Subtract() { 
+  this.flagSecond = true;
+  this.flagSubtract = true;
+}
+public RealAdd() {
+  if(this.flagAdd == true)
+  {
+    console.log(this.number1 + this.number2);
+  }
+}
+public RealSubtract() {
+  if(this.flagSubtract == true){
+    console.log(this.number1 -  this.number2);
+  }
+}
+public RealMultiply(){
+  if(this.flagMultiply == true){
+    console.log(this.number1 * this.number2);
+  }
+}
+public RealDivide() {
+  if(this.number1 != 0 && this.number2 !=0){
+    if(this.flagDivide == true){
+      console.log(this.number1 / this.number2);
+    }
+  }
+}
 }
 
