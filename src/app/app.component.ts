@@ -101,6 +101,8 @@ export class AppComponent {
      this.number1 = 0;
    }else{this.number2 = 0;}
  }
+ public Dot() {}
+ //has to be a string the number or else it cannot work
  
  public Print () {
    this.result = this.number1 + this.number2 ;
